@@ -1,0 +1,8 @@
+// //config 引入样式变量
+@import "variables";
+// //layout ，引入normalize.css样式
+@import "reboot";
+
+@import "mixin";
+
+@import "../components/Button/style";
