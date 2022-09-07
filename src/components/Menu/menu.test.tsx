@@ -5,13 +5,13 @@ import MenuItem, {MenuItemProps} from './menuItem'
 import classNames from "classnames";
 
 const testProps:MenuProps = {
-  defaultIndex:0,
+  defaultIndex:'0',
   onSelect:jest.fn(),//添加监控
   className:"test"
 }
 
 const testVerticalProps:MenuProps = {
-  defaultIndex:0,
+  defaultIndex:'0',
   mode:"vertical"
 }
 
@@ -19,13 +19,13 @@ const testVerticalProps:MenuProps = {
 const generateMenu  = (props:MenuProps) => {
   return (
     <Menu {...props}>
-      <MenuItem index={0}>
+      <MenuItem >
         active
       </MenuItem>
-      <MenuItem index={1} disabled>
+      <MenuItem  disabled>
         disabled
       </MenuItem>
-      <MenuItem index={2}>
+      <MenuItem >
         xyz
       </MenuItem>
     </Menu>
@@ -54,14 +54,14 @@ describe('test Menu and MenuItem component', () => {
     fireEvent.click(thirdItem);
     expect(thirdItem).toHaveClass('is-active');
     expect(activeElement).not.toHaveClass('is-acvite');
-    expect(testProps.onSelect).toHaveBeenCalledWith(2);
+    expect(testProps.onSelect).toHaveBeenCalledWith('2');//index==2
 
     fireEvent.click(disabledElement);
     expect(disabledElement).not.toHaveClass('is-active');
-    expect(testProps.onSelect).not.toHaveBeenCalledWith(1);
+    expect(testProps.onSelect).not.toHaveBeenCalledWith('1');//index ===1 
   });
 
-  test('should render vertical mode when mode is set to vertical ', () => {
+  test('should render vertical mode when mode is set to vertical', () => {
     cleanup();
     const view = render(generateMenu(testVerticalProps));
     const menuElement = view.getByTestId('test-menu');
