@@ -1,8 +1,14 @@
 import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {fas} from '@fortawesome/free-solid-svg-icons';
+import {library} from '@fortawesome/fontawesome-svg-core'
 import  Button, {ButtonSize, ButtonType} from './components/Button/button'
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
+import Icon from './components/Icon/icon';
+
+library.add(fas);
 function App() {
   return (
     <div className="App">
@@ -11,7 +17,7 @@ function App() {
       <Button btnType= {ButtonType.Link} href = 'https://www.baidu.com'>Link</Button>
       <Button btnType= {ButtonType.Primary} >Primary</Button>
       <Button btnType= {ButtonType.Default} >Default</Button> */}
-      <Menu mode='vertical'
+      <Menu mode='horizontal'
         defaultOpenSubMenus= {['2']}
         onSelect={(index) => {
           console.log(index);
@@ -27,8 +33,9 @@ function App() {
           </MenuItem>
         </SubMenu>
         <MenuItem >item3</MenuItem>
-        
       </Menu>
+      {/* <Icon icon="coffee" theme='primary' size='10x' /> */}
+
     </div>
   );
 }
