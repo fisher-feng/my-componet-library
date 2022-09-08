@@ -1,0 +1,32 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import Button from './button'
+
+<Meta title="Welcome" component = {Button}/>
+
+<style>
+ {
+  `
+    .jsx-title {
+      color:blue
+    }
+  `
+ }
+</style>
+
+# this is a tesing
+
+```jsx
+  const a = 'abc'
+```
+
+<h1 className = 'jsx-title'>test style</h1>
+
+<Canvas> 
+  <Story id ="第四章-button--default"/>
+</Canvas>
+
+<Canvas> 
+  <Story id ="第四章-button--link"/>
+</Canvas>
+
+<ArgsTable of = {Button}/>

@@ -17,6 +17,7 @@ function App() {
       <Button btnType= {ButtonType.Link} href = 'https://www.baidu.com'>Link</Button>
       <Button btnType= {ButtonType.Primary} >Primary</Button>
       <Button btnType= {ButtonType.Default} >Default</Button> */}
+
       <Menu mode='horizontal'
         defaultOpenSubMenus= {['2']}
         onSelect={(index) => {
@@ -24,7 +25,8 @@ function App() {
         }}  >
         <MenuItem >item1</MenuItem>
         <MenuItem  disabled>item2</MenuItem>
-        <SubMenu title='dropdown'>
+        <SubMenu title='dropdown'  
+        >
           <MenuItem>
             dropdown1
           </MenuItem>
