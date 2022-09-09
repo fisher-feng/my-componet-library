@@ -7,7 +7,7 @@ import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
 import Icon from './components/Icon/icon';
-
+import Input from './components/Input/input'
 library.add(fas);
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <Button btnType= {ButtonType.Primary} >Primary</Button>
       <Button btnType= {ButtonType.Default} >Default</Button> */}
 
-      <Menu mode='horizontal'
+      {/* <Menu mode='horizontal'
         defaultOpenSubMenus= {['2']}
         onSelect={(index) => {
           console.log(index);
@@ -35,9 +35,11 @@ function App() {
           </MenuItem>
         </SubMenu>
         <MenuItem >item3</MenuItem>
-      </Menu>
-      {/* <Icon icon="coffee" theme='primary' size='10x' /> */}
-
+      </Menu> */}
+      <Input append='append' prepend='prepand' icon= 'search' style={{width:500}} />
+      <Input append='append' prepend='prepand' icon= "search" disabled style={{width:500}}/>
+      <Input  style={{width:500}}/>
+      <Input  style={{width:500}} icon = "search"/>
     </div>
   );
 }
