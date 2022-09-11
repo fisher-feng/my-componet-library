@@ -3,29 +3,29 @@ import Menu from "./menu";
 import MenuItem from "./menuItem";
 import SubMenu from "./subMenu";
 
-import {addParameters, ComponentMeta, ComponentStory} from '@storybook/react';//用于手动改变属性？？
+import {addParameters, ComponentMeta, ComponentStory} from '@storybook/react';
 
 const menuMeta:ComponentMeta<typeof Menu> =  {
-  title:'第六章:menu',
+  title:'Menu',
   id:'Menu',
   component:Menu,
   subcomponents:{'SubMenu':SubMenu,'MenuItem':MenuItem},
   args:{
     defaultIndex:"2"
   },
-  argTypes:{
-    defaultIndex:{
-      control:'color',
-      description:'normal test'
-    }
-  },
-  parameters: {
-    controls:{
-      matchers:{
-         date:/mode$/,//把mode开头转换成date格式
-      }
-    }
-  }
+  // argTypes:{
+  //   defaultIndex:{
+  //     control:'color',
+  //     description:'normal test'
+  //   }
+  // },
+  // parameters: {
+  //   controls:{
+  //     matchers:{
+  //        date:/mode$/,//把mode开头转换成date格式
+  //     }
+  //   }
+  // }
   
 }
 

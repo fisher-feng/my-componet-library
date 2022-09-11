@@ -5,7 +5,7 @@ import mdx from './button.mdx'
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 
 const buttonMeta:ComponentMeta<typeof Button> =  {
-  title:'第四章:button',
+  title:'Button',
   component:Button,
   parameters:{
     docs:{

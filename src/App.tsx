@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {fas} from '@fortawesome/free-solid-svg-icons';
-import {library} from '@fortawesome/fontawesome-svg-core'
 import  Button, {ButtonSize, ButtonType} from './components/Button/button'
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
 import Icon from './components/Icon/icon';
-import Input from './components/Input/input'
-library.add(fas);
+import Input from './components/Input/input';
+import AutoCommplete, {DataSourceType} from './components/AutoComplete/autocomplete'
 function App() {
   return (
     <div className="App">
@@ -38,8 +36,11 @@ function App() {
       </Menu> */}
       <Input append='append' prepend='prepand' icon= 'search' style={{width:500}} />
       <Input append='append' prepend='prepand' icon= "search" disabled style={{width:500}}/>
-      <Input  style={{width:500}}/>
-      <Input  style={{width:500}} icon = "search"/>
+      <Input  style={{width:500}} value ='ssss'/>
+      <Input  style={{width:500}} icon = "search" onChange={(e) => {
+        console.log(e.target.value);
+      }}/>
+     
     </div>
   );
 }
