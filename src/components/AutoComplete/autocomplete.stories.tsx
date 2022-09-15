@@ -54,8 +54,8 @@ export const BCustomComplete = () => {
     const itemWithNumber = item as DataSourceType<LakerPlayerProps2>
     return (
       <>
-        <b>名字: {itemWithNumber.login}</b>
-        <span>球衣号码: {itemWithNumber.url}</span>
+        <b>name:</b> {itemWithNumber.login} &nbsp;
+        <span><b>url</b>: {itemWithNumber.url}</span>
       </>
     )
   }
@@ -66,6 +66,8 @@ export const BCustomComplete = () => {
         console.log(value);
       }}
       renderOption = {renderOption}
+      style = {{width:400}}
+      placeholder = '随便输入试试'
     />
   )
 }

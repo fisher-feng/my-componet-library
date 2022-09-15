@@ -22,20 +22,23 @@ const defaultFileList:UploadFile[] = [
 ]
 const SimpleUpload = () => {
   return (
-    <Upload 
-      action = "https://www.mocky.io/v2/5cc8019d300000980a055e76"
-      onChange = {action('changed')}
-      beforeUpload = {filesPromise}
-      defaultFileList = {defaultFileList}
-      onRemove = {()=> {}}
-      name = 'fileName'
-      data = {{'key':'value'}}
-      headers = {{'x-powerd-By':'vikingship'}}
-      accept = '.jpg'
-      multiple
-      children = 'upload file'
-      drag = {true}
-    />
+    <div style={{width:400}}>
+      <Upload 
+        action = "https://www.mocky.io/v2/5cc8019d300000980a055e76"
+        onChange = {action('changed')}
+        beforeUpload = {filesPromise}
+        defaultFileList = {defaultFileList}
+        onRemove = {()=> {}}
+        name = 'fileName'
+        data = {{'key':'value'}}
+        headers = {{'x-powerd-By':'vikingship'}}
+        accept = '.jpg'
+        multiple
+        children = 'upload file'
+        drag = {true}
+      />
+    </div>
+   
   )
 }
 
