@@ -1,5 +1,5 @@
 import React from "react";
-import AutoComplete, {AutoCompleteProps, DataSourceType} from "./autocomplete";
+import AutoComplete, {DataSourceType} from "./autocomplete";
 import {ComponentMeta} from '@storybook/react';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -12,10 +12,10 @@ const autoCompleteMeta:ComponentMeta<typeof AutoComplete> =  {
 }
 export default autoCompleteMeta;
 
-interface LakerPlayerProps{
-  value:string;
-  number:number;
-}
+// interface LakerPlayerProps{
+//   value:string;
+//   number:number;
+// }
 
 interface LakerPlayerProps2{
   login:string;

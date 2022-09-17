@@ -2,13 +2,13 @@ import React from "react";
 import {storiesOf} from '@storybook/react'
 import {action} from '@storybook/addon-actions'
 import Upload, {UploadFile} from "./upload";
-const checkFileSize = (file:File) => {
-  if(Math.round(file.size / 1024) > 50) {
-    alert('file too big');
-    return false;
-  }
-  return true;
-}
+// const checkFileSize = (file:File) => {
+//   if(Math.round(file.size / 1024) > 50) {
+//     alert('file too big');
+//     return false;
+//   }
+//   return true;
+// }
 const filesPromise = (file:File) => {
   const newFile = new File([file], 'new_name.docx', {
     type:file.type

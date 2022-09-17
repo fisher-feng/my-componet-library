@@ -1,4 +1,5 @@
-import {render, RenderResult, fireEvent, waitFor} from '@testing-library/react'
+/* eslint-disable testing-library/no-render-in-setup */
+import {render, RenderResult, fireEvent} from '@testing-library/react'
 import {Upload, UploadProps} from './upload';
 import axios from 'axios';
 
@@ -27,11 +28,11 @@ describe('test upload compoment', () => {
     // uploadArea = wrapper.queryByText('Click to upload');
   })
   test('upload process should works fine', async() => {
-    const {queryByText} = wrapper;
+    // const {queryByText} = wrapper;
     mockedAxios.post.mockImplementation(() => {
       return Promise.resolve({'data':"cool"})
     })
-    expect(uploadArea).toBeInTheDocument();
+    // expect(uploadArea).toBeInTheDocument();
     expect(fileInput).not.toBeVisible(); 
     fireEvent.change(fileInput, {targe:{files:[testFile]}});
     // expect(queryByText('spinner')).toBeInTheDocument();

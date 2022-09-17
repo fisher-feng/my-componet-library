@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import axios from 'axios'
 
 function App() {
@@ -33,7 +32,7 @@ function App() {
   }
   return (
     <div className="App">
-      {/* <h1>{title}</h1> */}
+      <h1>{title}</h1>
       <div>
         <input type="file"  name = "myFile" onChange={hanldeFileChange}/>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
-import Icon, {IconProps} from "./icon";
-import {addParameters, ComponentMeta, ComponentStory} from '@storybook/react';//用于手动改变属性？？
+import Icon from "./icon";
+import {ComponentMeta,} from '@storybook/react';//用于手动改变属性？？
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas);

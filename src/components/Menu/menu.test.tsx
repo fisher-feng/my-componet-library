@@ -1,3 +1,6 @@
+/* eslint-disable testing-library/no-node-access */
+/* eslint-disable testing-library/prefer-screen-queries */
+/* eslint-disable testing-library/no-render-in-setup */
 import React from "react";
 import {render, RenderResult, fireEvent, cleanup, waitFor} from '@testing-library/react'
 import Menu, {MenuProps} from './menu'

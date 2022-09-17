@@ -1,4 +1,4 @@
-import React, { Children, cloneElement, FunctionComponentElement, useContext, useState } from "react";
+import React, {FunctionComponentElement, useContext, useState } from "react";
 import classNames from "classnames";
 import {MenuContext} from './menu'
 import {MenuItemProps} from './menuItem'
